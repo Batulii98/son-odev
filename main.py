@@ -2,7 +2,7 @@
 from cryptography.fernet import Fernet
 import json
 
-# Şifreleme anahtarı (ilk çalışmada üret ve sakla)
+# Şifreleme anahtarı
 def load_key():
     return open("key.key", "rb").read()
 
@@ -54,7 +54,7 @@ def main():
         elif choice == "3":
             break
 
-if name == "main":
+if __name__ == "__main__":
     try:
         open("key.key")
     except:
@@ -65,4 +65,4 @@ if name == "main":
     except:
         pass
 
-    main()
+main()
